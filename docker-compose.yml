@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04"
+    ports:
+      - "1402:1433"
+    environment:
+      SA_PASSWORD: "12345Abc%"
+      ACCEPT_EULA: "Y"
