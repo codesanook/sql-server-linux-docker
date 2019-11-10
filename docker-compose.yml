@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "8000:80"
+    environment:
+      ConnectionStrings__DefaultConnection: "${ConnectionStrings__DefaultConnection:?err}"
     depends_on:
       - db
   db:
@@ -11,5 +13,5 @@ services:
     ports:
       - "1402:1433"
     environment:
-      SA_PASSWORD: "12345Abc%"
+      SA_PASSWORD: "${SA_PASSWORD:?err}"
       ACCEPT_EULA: "Y"
