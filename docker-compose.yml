@@ -2,6 +2,8 @@ version: "3"
 services:
   web:
     build: .
+    volumes:
+      - ./app:/app
     ports:
       - "8000:80"
     environment:
@@ -15,3 +17,4 @@ services:
     environment:
       SA_PASSWORD: "${SA_PASSWORD:?err}"
       ACCEPT_EULA: "Y"
+    #command: bash -c "/opt/mssql-tools/bin/sqlcmd -U SA -P $SA_PASSWORD -Q "USE master; IF db_id('CodeSanook') IS NULL CREATE DATABASE CodeSanook;""
