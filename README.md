@@ -16,7 +16,7 @@ $env:ConnectionStrings__DefaultConnection = "Server=db;Database=master;User=sa;P
 
 Alternatively
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.0#prefixes
-$env:SQLCONNSTR_DefaultConnection = "Server=db;Database=CodeSanook;User=SA;Password=$env:SA_PASSWORD;"
+$env:SQLCONNSTR_DefaultConnection = "Server=db;Database=master;User=SA;Password=$env:SA_PASSWORD;"
 
 
 To list all environment variables
