@@ -5,5 +5,7 @@ COPY ./init-db.sh /
 COPY ./create-db.sql /
 
 RUN whoami
+USER root
 RUN chmod +x ./init-db.sh
+USER mssql
 CMD  ./init-db.sh & /opt/mssql/bin/sqlservr 
