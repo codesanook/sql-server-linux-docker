@@ -21,3 +21,5 @@ $env:SQLCONNSTR_DefaultConnection = "Server=db;Database=CodeSanook;User=SA;Passw
 
 To list all environment variables
 Get-ChildItem env:* | Sort-Object name
+
+git config core.autocrlf false

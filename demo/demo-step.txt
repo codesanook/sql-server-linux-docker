@@ -3,6 +3,8 @@ docker pull
 docker run
 docker ps -a
 docker log sqlserver1
+
+enter the container
 docker exec
 ls
 pwd
@@ -10,20 +12,19 @@ whoami
 version
 cat /etc/*release
 
-Inside container
+execute inside container
 sql-cmd utility tool
 sql-cmd enter to show all possible argment
 get database version
 create database
 get database version with Q and exit
 
-GUI
+GUI tool
 connect to Azure Data Studio
 create table
 insert a record
 select a record
 code snippet for create an index
-
 
 Docker compose
 2 services
