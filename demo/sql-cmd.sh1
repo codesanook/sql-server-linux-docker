@@ -1,0 +1,4 @@
+opt/mssql-tools/bin/sqlcmd -U sa
+
+-- execute and exit
+opt/mssql-tools/bin/sqlcmd -U sa -Q "select @@version"

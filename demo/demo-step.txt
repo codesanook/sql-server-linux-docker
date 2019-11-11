@@ -1,0 +1,36 @@
+demo folder
+docker pull
+docker run
+docker ps -a
+docker log sqlserver1
+docker exec
+ls
+pwd
+whoami
+version
+cat /etc/*release
+
+Inside container
+sql-cmd utility tool
+sql-cmd enter to show all possible argment
+get database version
+create database
+get database version with Q and exit
+
+GUI
+connect to Azure Data Studio
+create table
+insert a record
+select a record
+code snippet for create an index
+
+
+Docker compose
+2 services
+ASP.NET MVC Core .NET Core 3
+SQL Server Linux 2019
+Configure hot reload
+Attach host drive
+dotnet watch run
+Initialize database at container startup
+Create a new database if not exist
