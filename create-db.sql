@@ -1,4 +1,5 @@
-IF db_id('CodeSanook') IS NULL 
+IF db_id('Codesanook') IS NULL 
 BEGIN
-    CREATE DATABASE CodeSanook
+    CREATE DATABASE Codesanook
 END
+GO

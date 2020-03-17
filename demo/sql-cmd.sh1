@@ -1,4 +1,12 @@
 opt/mssql-tools/bin/sqlcmd -U sa
 
+select @@version
+
+exec sp_databases
+select db_name()
+
+
 -- execute and exit
 opt/mssql-tools/bin/sqlcmd -U sa -Q "select @@version"
+
+use quit or ctrl+c

@@ -20,6 +20,8 @@ namespace DockerCompose.Controllers
 
         public IActionResult Index()
         {
+            const string message = "Hello World Pong";
+            ViewBag.Message = message;
             return View();
         }
 

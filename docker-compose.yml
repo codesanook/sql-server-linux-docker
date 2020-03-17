@@ -1,23 +1,35 @@
-version: "3"
+version: "3.7"
+# docker-compose ps to list all runing container
+# https://docs.docker.com/compose/reference/ps/
 services:
   web:
     build:
       context: .
       dockerfile: web.Dockerfile
+    # If you specify image as well as build,
+    # then Compose names the built image with the webapp
+    # and optional tag specified in image:
+    # This results in an image named webapp and tagged tag, built from ./dir.
+    image: sql-linux-web:latest
+    # https://docs.docker.com/compose/compose-file/#container_name
+    container_name: sql-linux-web
     volumes:
-      - ./app:/app
+      - ./app:/app # ./app on local map to /app in the container 
     ports:
       - "8000:80"
     environment:
-      ConnectionStrings__DefaultConnection: "${ConnectionStrings__DefaultConnection:?err}"
+      ConnectionStrings__DefaultConnection: "${ConnectionString:?err}"
     depends_on:
       - db
+
   db:
     build:
       context: .
       dockerfile: db.Dockerfile
+    image: sql-linux-db:latest
+    container_name: sql-linux-db
     ports:
-      - "1402:1433"
+      - "1433:1433"
     environment:
       SA_PASSWORD: "${SA_PASSWORD:?err}"
       ACCEPT_EULA: "Y"
