@@ -1,5 +1,7 @@
-docker exec -it sqlserver1 bash
+docker exec -it sqlserver bash
+# Use exit to leave
 
-use exit to leave
-
+ls => list
+pwd => print working directory
 cat /etc/*release
+whoami

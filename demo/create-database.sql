@@ -1,7 +1,7 @@
 USE master
 GO
 
-CREATE DATABASE CodeSanook
+CREATE DATABASE Codesanook
 GO
 
 EXEC sp_databases
