@@ -1,8 +1,0 @@
-SELECT @@VERSION
-GO
-
-CREATE DATABASE codesanook
-GO
-
-DROP DATABASE codesanook
-GO
